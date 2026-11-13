@@ -108,4 +108,63 @@ If input grows 100 times, stack operations
 remain constant per task, while list-based
 queue removal becomes more expensive.
 A deque can provide O(1) queue operations.
+
+
+## Part 3. Build a Small Tree
+
+### Input:
+Subjects:
+Math, Science, Physics, Chemistry,
+Algebra, Geometry.
+
+### Tree Structure:
+
+Level 0: Math, Science
+
+Level 1 under Math:
+Algebra, Geometry
+
+Level 1 under Science:
+Physics, Chemistry
+
+### Level Order Traversal:
+Math, Science, Algebra, Geometry,
+Physics, Chemistry.
+
+### Dry Run:
+Start Queue: Math, Science
+
+1. Visit Math.
+   Add Algebra, Geometry.
+
+2. Visit Science.
+   Add Physics, Chemistry.
+
+3. Visit Algebra.
+4. Visit Geometry.
+5. Visit Physics.
+6. Visit Chemistry.
+
+Final Queue: Empty.
+
+### Data Structure Used:
+Tree (represented using Dictionary)
+and Queue (for traversal).
+
+### Explanation:
+A tree is a non-linear data structure
+that represents hierarchical relationships.
+
+Level order traversal visits nodes level
+by level, from left to right. It uses a
+queue to process nodes in FIFO order.
+
+### Complexity:
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+If the number of nodes grows 100 times,
+the traversal effort also grows approximately
+100 times when an efficient queue is used.
+
 # IC-2323-54-DAA-lalit-solanki
